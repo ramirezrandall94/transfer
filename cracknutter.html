@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>Hello Nigga</title>
+</head>
+<body>
+    <div style="display: inline-flex; flex-direction: column; margin-right: auto;">
+        <h1>Your computer has been hacked please subscribe to</h1>
+        <h1>the service provided above for one time $20 dollars</h1>
+        <h1>then I will provide the solution by sending you to other website with the solution</h1>
+    </div>
+    <div id="paypal-button-container-P-25R05040T81458825M6B6AWA"></div>
+    <script src="https://www.paypal.com/sdk/js?client-id=Ac5AykKzi1svI0wNrvVQoRX2rEHoc89Edp2vlmwPBEXUX_FVElDtMNI33XKN4bOsqG2Q_-h_jbNNdQvV&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
+    <script>
+      paypal.Buttons({
+          style: {
+              shape: 'rect',
+              color: 'white',
+              layout: 'vertical',
+              label: 'subscribe'
+          },
+          createSubscription: function(data, actions) {
+            return actions.subscription.create({
+              /* Creates the subscription */
+              plan_id: 'P-25R05040T81458825M6B6AWA'
+            });
+          },
+          onApprove: function(data, actions) {
+            alert(); // You can add optional success message for the subscriber here
+          }
+      }).render('#paypal-button-container-P-25R05040T81458825M6B6AWA'); // Renders the PayPal button
+    </script>
+</script>
+</body>
+</html>
